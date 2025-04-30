@@ -11,6 +11,15 @@ public class Data {
      */
     public void repopulate() {
         /* to be implemented in part (a) */
+        for (int r = 0; r < grid.length; r ++) {
+            for (int c = 0; c < grid[0].length; c ++) {
+                double generate = (int) (Math.random() * MAX) + 1;
+                while (generate % 10 != 0 && generate % 100 == 0) {
+                    generate = (int) (Math.random() * MAX) + 1;
+                }
+                grid[r][c] = (int) generate;
+            }
+        }
     }
 
 
